@@ -23,20 +23,22 @@ class Ventanainicio(QMainWindow):
     def setCoordinador(self,c):
         self.__coordinador = c
     
-    def validardatos(self):
-        username = self.campo_user.text()
-        password = self.campo_password.text()
-        verificar = self.__coordinador.validarusuario(username,password)
 
-        if verificar:
+    def validardatos(self):
+        pass
+        # username = self.campo_user.text()
+        # password = self.campo_password.text()
+        # verificar = self.__coordinador.validarusuario(username,password)
+
+        # if verificar:
             
-            self.hide()
-            self.newWindow = Vista()
-            self.newWindow.setCoordinador(self.__coordinador)
-            self.newWindow.show()
+        #     self.hide()
+        #     self.newWindow = Vista()
+        #     self.newWindow.setCoordinador(self.__coordinador)
+        #     self.newWindow.show()
     
-        else:
-            QMessageBox.warning(self, "Error de inicio de sesión", "Usuario o contraseña incorrectos.")
+        # else:
+        #     QMessageBox.warning(self, "Error de inicio de sesión", "Usuario o contraseña incorrectos.")
     
     def closeOption(self):
         self.close()
